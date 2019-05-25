@@ -28,13 +28,34 @@
 
       <main id="maincontent">
         <section id="mainsec1">
-
+          <img src="images/traffic-332857_1920.jpg" alt="">
         </section>
         <section id="mainsec2">
-
+          <h1>Udsjfdjgd djfdkjd</h1>
+          <p>Idigjdkjg dospjgdjg ojgdgkfkgrpgkl ejiejt.</p>
+          <p>Idigjdkjg dospjgdjg ojgdgkfkgrpgkl ejiejt.</p>
+          <p>Idigjdkjg dospjgdjg ojgdgkfkgrpgkl ejiejt.</p>
         </section>
         <section id="mainsec3">
-
+          <form class="" action="index.html" method="post">
+            <div class="">
+              <label for="name">Your name:</label><input type="text" name="name" id="name" value="">
+              <label for="horsePower">Horse power of your car:</label><input type="text" name="horsePower" id="horsePower" value="">
+            </div>
+            <div class="">
+              <label for="age">your age:</label><input type="text" name="age" id="age" value="">
+              <label for="country">Country:</label>
+              <select class="" name="country" id="country" size="1">
+                <option value="Austria">Austria</option>
+                <option value="Hungary">Hungary</option>
+                <option value="Greece">Greece</option>
+              </select>
+            </div>
+          </form>
+          <p>
+            <button type="button" name="button" id="calculate">Calculate</button>
+          </p>
+          <h1 id="insuranceResult">Printed calculation goes here.</h1>
         </section>
       </main><!-- /maincontent -->
 
@@ -58,8 +79,11 @@
     <script type="text/javascript" src="js/functions.js"></script>
     <script>
       var inputValues = getInputValues(name, country, horsePower, age);
-      var costs = calculateInsurance(inputValues[1], inputValues[2], inputValues[3]);
-      resultOfInsurance();
+      parseInt(calculateInsurance(inputValues[1], inputValues[2], inputValues[3]));
+      document.getElementById('calculate').onclick = resultOfInsurance();
+
+      console.log(inputValues);
+      console.log(calculateInsurance(inputValues[1], inputValues[2], inputValues[3]));
 
     </script>
   </body>
