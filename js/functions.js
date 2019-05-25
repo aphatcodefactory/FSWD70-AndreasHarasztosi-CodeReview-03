@@ -5,7 +5,7 @@ function getInputValues(id1, id2, id3, id4) {
   var country = document.getElementById(id2).value;
   var horsePower = document.getElementById(id3).value;
   var age = document.getElementById(id4).value;
-  return inputValues = [name, country, horsePower, age];
+  return inputValues = [name, country, number(horsePower), number(age)];
 }
 
 // calculate insurance
