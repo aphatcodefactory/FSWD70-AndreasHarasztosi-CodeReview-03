@@ -47,6 +47,7 @@
               <label for="age">your age:</label><input type="text" name="age" id="age" value="">
               <label for="country">Country:</label>
               <select class="" name="country" id="country" size="1">
+                <option>[Please choose a country]</option>
                 <option value="Austria">Austria</option>
                 <option value="Hungary">Hungary</option>
                 <option value="Greece">Greece</option>
@@ -54,7 +55,7 @@
             </div>
           </form>
           <p>
-            <button type="button" name="button" id="calculate">Calculate</button>
+            <button type="button" name="button" id="calculate" onclick="javascript:calculateInsurance()">Calculate</button>
           </p>
           <h1 id="insuranceResult">Printed calculation goes here.</h1>
         </section>
@@ -111,12 +112,7 @@
 
     <script type="text/javascript" src="js/functions.js"></script>
     <script>
-      var inputValues = getInputValues(name, country, horsePower, age);
-      parseInt(calculateInsurance(inputValues[1], inputValues[2], inputValues[3]));
-      document.getElementById('calculate').onclick = resultOfInsurance();
-
-      console.log(inputValues);
-      console.log(calculateInsurance(inputValues[1], inputValues[2], inputValues[3]));
+      //document.getElementById('calculate').on('click', calculateInsurance());
 
     </script>
   </body>

@@ -1,17 +1,28 @@
-// get input values
-var id1, id2, id3, id4;
-
-function getInputValues() {
+// calculate insurance
+function calculateInsurance() {
   var name = document.getElementById('name').value;
   var country = document.getElementById('country').value;
-  var horsePower = document.getElementById('horsePower').value;
-  var age = document.getElementById('age').value;
-  return inputValues = [name, country, parseInt(horsePower), parseInt(age)];
-}
+  var horsePower = parseInt(document.getElementById('horsePower').value);
+  var age = parseInt(document.getElementById('age').value);
 
-// calculate insurance
-function calculateInsurance(country, horsePower, age) {
-  switch (country) {
+  console.log(name, country, horsePower, age);
+
+  if (country == 'Austria') {
+    var costs = horsePower * 100 / age + 50;
+    document.getElementById('insuranceResult').innerHTML = name + ', your insurance costs &euro; ' + Math.floor(costs);
+
+  } else if (country == 'Hungary') {
+    costs = horsePower * 120 / age  + 100;
+    document.getElementById('insuranceResult').innerHTML = name + ', your insurance costs &euro; ' + Math.floor(costs);
+
+  } else if (country == 'Greece') {
+    costs = horsePower * 150 / (age + 3)  + 50;
+    document.getElementById('insuranceResult').innerHTML = name + ', your insurance costs &euro; ' + Math.floor(costs);
+    
+  }/* else {
+    document.getElementById('insuranceResult').innerHTML = 'Printed calculation goes here.';
+  }*/
+  /*switch (country) {
     case 'Hungary':
       return parseInt(horsePower * 120 / age  + 100);
       break;
@@ -20,11 +31,5 @@ function calculateInsurance(country, horsePower, age) {
       break;
     default:
       return parseInt(horsePower * 100 / age  + 50);
-  }
-}
-
-// print insurance info
-function resultOfInsurance() {
-  document.getElementById('insuranceResult').innerHTML =
-      inputValues[0] + ', your insurance costs &euro; ' + parseInt(calculateInsurance()) + '.';
+  }*/
 }

@@ -162,3 +162,14 @@ body {
       text-decoration: none; }
 
 /*# sourceMappingURL=main.css.map */
+
+@media (max-width: 768px) {
+  #header {
+    padding: 0.5rem;
+  }
+
+  #banner, #banner img {
+    width: 230px;
+    height: auto;
+  }
+}
